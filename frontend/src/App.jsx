@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Database, GitPullRequest, Loader2, AlertCircle, CheckCircle, ExternalLink } from 'lucide-react';
 
-const API_BASE = 'http://127.0.0.1:8000/api';
+const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+const API_BASE = isLocalhost
+  ? 'http://127.0.0.1:8000/api'
+  : 'https://github-rag-navigator.onrender.com/api'; // Updated to match your exact Render URL!
 
 export default function App() {
   const [repos, setRepos] = useState([]);

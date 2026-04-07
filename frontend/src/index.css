@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+/* You can add any custom global CSS here if needed, but Tailwind handles 99% of it */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
